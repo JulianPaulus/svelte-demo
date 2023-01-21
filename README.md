@@ -1,10 +1,12 @@
 # Zum Ausführen
 
 * Dependencies installieren
+
 Im Terminal `npm install` ausführen.
 (Manchmal machen die Codespaces das auch automatisch wenn sie ein NPM-Projekt erkennen, einfach mal ins Terminal schauen)
 
 * Starten
+
 Im Terminal `npm run dev` ausführen.
 Falls Codespace benutzt wird:
 `npm run dev -- --host=0.0.0.0` ausführen statt dem Befehl oben.
@@ -12,6 +14,7 @@ Dann sollte unten rechts ein Popup aufploppen, dass ein offener Port erkannt wur
 Falls das Popup nicht auftaucht: Über den Ports-Tab im unteren Drittel von Codespaces kann die Seite auch geöffnet werden.
 
 * Svelte-Extension installieren
+
 Entweder links in den Extension-Browser von VSCode gehen und es von dort installieren,
 oder mal eine .svelte-Datei öffnen. Dann kommt meistens ein Popup das fragt, ob man die Extension benutzen will.
 
