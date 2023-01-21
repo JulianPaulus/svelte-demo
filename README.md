@@ -1,3 +1,17 @@
+# Zum Ausführen
+
+* Dependencies installieren
+Im Terminal `npm install` ausführen.
+
+* Starten
+Im Terminal `npm run dev` ausführen.
+Falls Codespace benutzt wird:
+`npm run dev -- --host=0.0.0.0` ausführen statt dem Befehl oben.
+Dann sollte unten rechts ein Popup aufploppen, dass ein offener Port erkannt wurde, hierüber kann man die Seite öffnen.
+Falls das Popup nicht auftaucht: Über den Ports-Tab im unteren Drittel von Codespaces kann die Seite auch geöffnet werden.
+
+
+# Original README:
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
