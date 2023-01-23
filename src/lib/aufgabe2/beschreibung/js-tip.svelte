@@ -2,7 +2,7 @@
     let show = false;
 </script>
 
-<p>Falls ihr Unterstützung braucht, könnt ihr euch <a on:click={() => show = true}>hier</a> die Musterlösung für den Script-Teil ansehen</p>
+<p>Falls ihr Unterstützung braucht, könnt ihr euch <a on:click={() => show = !show}>hier</a> die Musterlösung für den Script-Teil ansehen</p>
 {#if show}
 <div class="highlight">
     <pre>
