@@ -1,5 +1,8 @@
 <script>
     // Euer JavaScript hier
+    let input = '';
+
+    $: inputUpper = input.toUpperCase();
 </script>
 
 <section class="hero is-fullheight">
@@ -23,7 +26,11 @@
                 </div>
             </div>
             <div class="column">
-                <!-- Euer Template-Code hier -->
+                <!-- Musterlösung -->
+                <input type="text" bind:value={input} />
+                <hr />
+                <p class="content">Input: '{input}'</p>
+                <p class="content">Input Uppercase: '{inputUpper}'</p>
             </div>
       </div>
     </div>

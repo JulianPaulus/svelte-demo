@@ -1,8 +1,16 @@
 <script>
     import Beschreibung from '$lib/aufgabe2/beschreibung/aufgabenbeschreibung.svelte';
 
-    // Euer JavaScript hier
+    let factPromise = loadFact();
 
+    async function loadFact() {
+        const response = await fetch('/facts');
+        return await response.json();
+    }
+
+    async function updateFact() {
+        factPromise = loadFact();
+    }
 </script>
 
 <section class="hero is-fullheight">
@@ -20,7 +28,8 @@
                         </p>
                     </div>
                     <div class="column has-content-centered">
-                        <button type="button" class="button is-primary">Neuer Fakt</button>
+                        <!-- Hier musste noch das on:click hinzugefügt werden -->
+                        <button type="button" class="button is-primary" on:click={updateFact}>Neuer Fakt</button>
                     </div>
                 </div>
                 <div class="content">
@@ -28,7 +37,13 @@
                 </div>
             </div>
             <div class="column">
-                <!-- Euer Template-Code  -->
+                <!-- Musterlösung  -->
+                {#await factPromise}
+                    <p class="content">Lade neuen Fakt</p>
+                {:then data}
+                    <p class="content">{data.fact}</p>
+                    <img class="image" src="{data.imagePath}" alt="Igelbild"/>
+                {/await}
             </div>
         </div>
       </div>
